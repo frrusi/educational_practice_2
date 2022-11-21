@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green_background"
+    tools:context=".login.LoginActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_button"
+        android:layout_width="321dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/round_green_button"
+        android:fontFamily="@font/alegreya_sans_medium"
+        android:text="@string/sign_in_text"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/input_password"
+        app:layout_constraintStart_toStartOf="@+id/input_password"
+        app:layout_constraintTop_toBottomOf="@+id/input_password"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register_button"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="@string/register_text"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_button"
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile_button"
+        android:layout_width="321dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/round_green_button"
+        android:fontFamily="@font/alegreya_sans_medium"
+        android:text="@string/profile_text"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/register_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/register_button"
+        app:layout_constraintTop_toBottomOf="@+id/register_button" />
+
+    <TextView
+        android:id="@+id/register_stub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_sans_medium"
+        android:text="@string/sign_in_text"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_logo"
+        app:layout_constraintTop_toBottomOf="@+id/login_logo" />
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/mini_logo_flower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:autofillHints=""
+        android:backgroundTint="#BEC2C2"
+        android:ems="10"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="#BEC2C2"
+        android:textColorHint="#BEC2C2"
+        app:layout_constraintStart_toStartOf="@+id/register_stub_text"
+        app:layout_constraintTop_toBottomOf="@+id/register_stub_text" />
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:autofillHints=""
+        android:backgroundTint="#BEC2C2"
+        android:ems="10"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#BEC2C2"
+        android:textColorHint="#BEC2C2"
+        app:layout_constraintEnd_toEndOf="@+id/input_email"
+        app:layout_constraintStart_toStartOf="@+id/input_email"
+        app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+    <ImageView
+        android:id="@+id/fern_image"
+        android:layout_width="411dp"
+        android:layout_height="231dp"
+        android:contentDescription="@string/Description_photo_with_a_fern"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/fern" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
